@@ -5,36 +5,45 @@
     <url>/2020/03/09/workreview/</url>
     <content><![CDATA[<h3 id="安装hexo">安装hexo</h3>
 <blockquote>
-<p>内容基本参考Bruce的<a href="URL" title="http://ibruce.info/2013/11/22/hexo-your-blog/">Hexo你的博客</a>。</p>
+<p>内容基本参考Bruce的<a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="noopener">Hexo你的博客</a>。</p>
 </blockquote>
+<p><br></p>
 <h3 id="绑定域名">绑定域名</h3>
 <blockquote>
-<p>该内容来参考<strong>掘金</strong>的博主：<a href="URL" title="https://juejin.im/post/5c0380a86fb9a049ff4ddd74">橘子味汽水</a>的答案</p>
+<p>该内容来参考<strong>掘金</strong>的博主：<a href="https://juejin.im/post/5c0380a86fb9a049ff4ddd74" target="_blank" rel="noopener">橘子味汽水</a>的答案</p>
 </blockquote>
-<p>我们已经利用<strong>hexo</strong>在<strong>Github</strong>上搭建了静态博客，但是我们每次都只能通过<a href="URL" title="xfengwei.github.io">xfengwei.github.io</a>(即进入个人Github的repository)来完成登陆网站。但问题在于，首先输入这个网页的名字总是繁琐的，不仅是很多不了解<strong>Github</strong>的人可能会输入错误，同时这个名字并不美观，也没办法自定义，所以我们想到通过绑定自己注册的个性化域名来达到目的。国内主流的域名代理厂商一般就是阿里云和腾讯云。</p>
-<p>下面演示的是<a href="URL" title="https://www.aliyun.com">阿里云</a>的操作流程：注册账号并且花钱购买一个个人的域名之后，官网右上角点击进入管理控制台，在域名列表选择你所需要的个性化域名并且点击右侧的“解析设置”如下图</p>
-<p><img src='http://i2.tiimg.com/712030/6f96fbcac601d481.png'></p>
+<p>我们已经利用<strong>hexo</strong>在<strong>Github</strong>上搭建了静态博客，但是我们每次都只能通过<a href="xfengwei.github.io" class="uri">xfengwei.github.io</a>(即进入个人Github的repository)来完成登陆网站。但问题在于，首先输入这个网页的名字总是繁琐的，不仅是很多不了解<strong>Github</strong>的人可能会输入错误，同时这个名字并不美观，也没办法自定义，所以我们想到通过绑定自己注册的个性化域名来达到目的。国内主流的域名代理厂商一般就是阿里云和腾讯云。</p>
+<p>下面演示的是<a href="https://www.aliyun.com" target="_blank" rel="noopener">阿里云</a>的操作流程：注册账号并且花钱购买一个个人的域名之后，官网右上角点击进入管理控制台，在域名列表选择你所需要的个性化域名并且点击右侧的“解析设置”如下图</p>
+<p><img src='http://i2.tiimg.com/712030/6f96fbcac601d481.png' width = "500" height = "300"></p>
 <p>点击“新手引导”，并将你github厂库的ping输入其中，点击确定</p>
-<p><img src='http://i1.fuimg.com/712030/ecd535829b95236e.png'></p>
+<p><img src='http://i1.fuimg.com/712030/ecd535829b95236e.png' width = "500" height = "300"></p>
 <p>这里我们自动添加了两条记录，但是有的人是提出要添加三条（但是我试了不太行），这边还是给出<a href="URL" title="https://zhuanlan.zhihu.com/p/26625249">链接</a>作为参考。</p>
 <p>接下来我们打开之前用于导入hexo数据的github厂库，然后点开设置(setting)下滑至custom domain栏目，填写你所注册的个性化域名并保存，例如我的是xiaofengchui.ink</p>
-<p><img src='http://i1.fuimg.com/712030/e7b02b0b550dacb4.png'></p>
+<p><img src='http://i1.fuimg.com/712030/e7b02b0b550dacb4.png' width = "500" height = "300"></p>
 <p>然后再在你的本地blog/source目录下新建一个记事本，名为CNAME并且在里面输入你的个性化域名，然后保存为任意文件格式，如果是mac用户特别注意，当用自带的文本编辑器创建之后，在菜单栏找到格式，点击里面的制作多信息文本即可保存。</p>
 <p>接下来重启hexo，依次输入:</p>
-<center>
-hexo clean
-</center>
-<center>
-hexo generate
-</center>
-<center>
-hexo deploy
-</center>
+<pre><code>$ hexo clean
+$ hexo g # generate
+$ hexo d # deploy</code></pre>
 <p>完成！</p>
+<p><br></p>
 <h3 id="新增本地搜索引擎">新增本地搜索引擎</h3>
 <blockquote>
-<p>内容参考始终的<a href="">为 Hexo 博客创建本地搜索引擎</a></p>
+<p>内容参考博主<strong>Yaya</strong>的<a href="https://yashuning.github.io/2018/06/29/hexo-Next-%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/" target="_blank" rel="noopener">hexo - Next 主题添加搜索功能</a>，该方法要求Next的主题版本至少在5.1.0</p>
 </blockquote>
+<h3 id="新增评论板块">新增评论板块</h3>
+<blockquote>
+<p>内容参考博主<strong>Yaya</strong>的<a href="https://yashuning.github.io/2018/06/29/hexo-Next-%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/" target="_blank" rel="noopener">hexo - Next 主题添加评论功能</a>，下面主要以valine评论系统进行演示。</p>
+</blockquote>
+<p>首先我们需要在<a href="https://www.leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>注册一个账号，进入控制台，然后添加新的一个App，选择<del>免费</del>developer模式，然后创建。点开App项目（我的App名字叫comment，如下图）之后，选择左侧项目栏的App keys，保存AppID与AppKey备用</p>
+<p><img src='http://i1.fuimg.com/712030/0dc6a62fe31bc889.png' width = "500" height = "300"></p>
+<p>选择主题文件下的_config.yml文件，然后搜索valine板块，将刚刚保存的AppID与AppKey填入</p>
+<p><img src='http://i2.tiimg.com/712030/861d86350d05de15.png' width = "500" height = "300"></p>
+<p>重启hexo，依次输入：</p>
+<pre><code>$ hexo clean
+$ hexo g # generate
+$ hexo d # deploy</code></pre>
+<p>完成！</p>
 ]]></content>
       <categories>
         <category>工作日志</category>
@@ -44,6 +53,11 @@ hexo deploy
         <tag>website</tag>
         <tag>workreview</tag>
         <tag>LeanCloud</tag>
+        <tag>安装hexo</tag>
+        <tag>绑定域名</tag>
+        <tag>Next-搜索</tag>
+        <tag>Next-评论</tag>
+        <tag>valine</tag>
       </tags>
   </entry>
   <entry>
