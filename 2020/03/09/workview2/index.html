@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="hexo,workview,LeanCloud,Next-搜索,Next-评论,valine," />
+  <meta name="keywords" content="hexo,LeanCloud,workview,Next-搜索,Next-评论,valine," />
 
 
 
@@ -79,21 +79,21 @@
 
 
 
-<meta name="description" content="hljs.initHighlightingOnLoad();  hljs.initLineNumbersOnLoad(); 新增本地搜索引擎  内容参考博主Yaya的hexo - Next 主题添加搜索功能，该方法要求Next的主题版本至少在5.1.0  首先安装插件 hexo-generator-searchdb： 在blog工作目录下： $ npm install hexo-generat">
+<meta name="description" content="新增本地搜索引擎  内容参考博主Yaya的hexo - Next 主题添加搜索功能，该方法要求Next的主题版本至少在5.1.0  首先安装插件 hexo-generator-searchdb： 在blog工作目录下： $ npm install hexo-generator-searchdb --save 然后来配置根目录下的 _config.yml 文件： search:   path: se">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搜索引擎和评论新增">
+<meta property="og:title" content="新增搜索引擎和评论">
 <meta property="og:url" content="http://yoursite.com/2020/03/09/workview2/index.html">
 <meta property="og:site_name" content="小风吹墨">
-<meta property="og:description" content="hljs.initHighlightingOnLoad();  hljs.initLineNumbersOnLoad(); 新增本地搜索引擎  内容参考博主Yaya的hexo - Next 主题添加搜索功能，该方法要求Next的主题版本至少在5.1.0  首先安装插件 hexo-generator-searchdb： 在blog工作目录下： $ npm install hexo-generat">
+<meta property="og:description" content="新增本地搜索引擎  内容参考博主Yaya的hexo - Next 主题添加搜索功能，该方法要求Next的主题版本至少在5.1.0  首先安装插件 hexo-generator-searchdb： 在blog工作目录下： $ npm install hexo-generator-searchdb --save 然后来配置根目录下的 _config.yml 文件： search:   path: se">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://i1.fuimg.com/712030/0dc6a62fe31bc889.png">
 <meta property="og:image" content="http://i2.tiimg.com/712030/861d86350d05de15.png">
 <meta property="article:published_time" content="2020-03-09T15:22:09.000Z">
-<meta property="article:modified_time" content="2020-03-09T15:32:22.084Z">
+<meta property="article:modified_time" content="2020-03-09T16:11:40.695Z">
 <meta property="article:author" content="Xiaofengchui">
 <meta property="article:tag" content="hexo">
-<meta property="article:tag" content="workview">
 <meta property="article:tag" content="LeanCloud">
+<meta property="article:tag" content="workview">
 <meta property="article:tag" content="Next-搜索">
 <meta property="article:tag" content="Next-评论">
 <meta property="article:tag" content="valine">
@@ -134,7 +134,7 @@
 
 
 
-  <title>搜索引擎和评论新增 | 小风吹墨</title>
+  <title>新增搜索引擎和评论 | 小风吹墨</title>
   
 
 
@@ -322,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">搜索引擎和评论新增</h1>
+          <h1 class="post-title" itemprop="name headline">新增搜索引擎和评论</h1>
         
 
         <div class="post-meta">
@@ -350,8 +350,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-03-09T23:32:22+08:00">
-                2020-03-09
+              <time title="Post modified" itemprop="dateModified" datetime="2020-03-10T00:11:40+08:00">
+                2020-03-10
               </time>
             
           </span>
@@ -416,12 +416,7 @@
       
 
       
-        <p><link href="https://cdn.bootcss.com/highlight.js/9.6.0/styles/atelier-lakeside-dark.min.css" rel="stylesheet"/></p>
-<script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-<script src="//cdn.bootcss.com/highlightjs-line-numbers.js/1.1.0/highlightjs-line-numbers.min.js"></script>
-<script>hljs.initLineNumbersOnLoad();</script>
-<h3 id="新增本地搜索引擎">新增本地搜索引擎</h3>
+        <h3 id="新增本地搜索引擎">新增本地搜索引擎</h3>
 <blockquote>
 <p>内容参考博主<strong>Yaya</strong>的<a href="https://yashuning.github.io/2018/06/29/hexo-Next-%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/" target="_blank" rel="noopener">hexo - Next 主题添加搜索功能</a>，该方法要求Next的主题版本至少在5.1.0</p>
 </blockquote>
@@ -429,7 +424,16 @@
 <p>在blog工作目录下：</p>
 <pre><code>$ npm install hexo-generator-searchdb --save</code></pre>
 <p>然后来配置根目录下的 <code>_config.yml</code> 文件：</p>
-<p>完成之后配置</p>
+<pre><code>search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000</code></pre>
+<p>最后配置主题的 <code>_config.yml</code> 文件：</p>
+<pre><code># Local search
+local_search:
+  enable: true</code></pre>
+<p><br></p>
 <h3 id="新增评论板块">新增评论板块</h3>
 <blockquote>
 <p>内容参考博主<strong>Yaya</strong>的<a href="https://yashuning.github.io/2018/06/29/hexo-Next-%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/" target="_blank" rel="noopener">hexo - Next 主题添加评论功能</a>，下面主要以valine评论系统进行演示。</p>
@@ -438,7 +442,7 @@
 <p><img src='http://i1.fuimg.com/712030/0dc6a62fe31bc889.png' width = "500" height = "300"></p>
 <p>选择主题文件下的_config.yml文件，然后搜索valine板块，将刚刚保存的AppID与AppKey填入</p>
 <p><img src='http://i2.tiimg.com/712030/861d86350d05de15.png' width = "500" height = "300"></p>
-<p>重启hexo，依次输入：</p>
+<p>重新部署hexo，依次输入：</p>
 <pre><code>$ hexo clean
 $ hexo g # generate
 $ hexo d # deploy</code></pre>
@@ -462,9 +466,9 @@ $ hexo d # deploy</code></pre>
           
             <a href="/tags/hexo/" rel="tag"># hexo</a>
           
-            <a href="/tags/workview/" rel="tag"># workview</a>
-          
             <a href="/tags/LeanCloud/" rel="tag"># LeanCloud</a>
+          
+            <a href="/tags/workview/" rel="tag"># workview</a>
           
             <a href="/tags/Next-%E6%90%9C%E7%B4%A2/" rel="tag"># Next-搜索</a>
           
@@ -483,7 +487,7 @@ $ hexo d # deploy</code></pre>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/03/09/workreview/" rel="next" title="建站与绑定域名">
+              <a href="/2020/03/09/workreview1/" rel="next" title="建站与绑定域名">
                 <i class="fa fa-chevron-left"></i> 建站与绑定域名
               </a>
             
@@ -575,7 +579,7 @@ $ hexo d # deploy</code></pre>
               
                 <a href="/archives%7C%7C%20archive">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -672,6 +676,20 @@ $ hexo d # deploy</code></pre>
 
 
 
+
+## 增加高亮
+<% if (config.highlightjs) { %>
+<!-- Highlight.js -->
+<link rel="stylesheet"
+      href="//cdn.bootcss.com/highlight.js/9.6.0/styles/atelier-lakeside-dark.min.css">
+<script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js">
+</script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="//cdn.bootcss.com/highlightjs-line-numbers.js/1.1.0/highlightjs-line-numbers.min.js"></script>
+<script>hljs.initLineNumbersOnLoad();</script>
+<% } %>
 
         
 
