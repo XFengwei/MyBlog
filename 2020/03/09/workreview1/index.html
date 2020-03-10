@@ -90,7 +90,7 @@
 <meta property="og:image" content="http://i1.fuimg.com/712030/ecd535829b95236e.png">
 <meta property="og:image" content="http://i1.fuimg.com/712030/e7b02b0b550dacb4.png">
 <meta property="article:published_time" content="2020-03-09T03:33:20.000Z">
-<meta property="article:modified_time" content="2020-03-09T16:26:07.343Z">
+<meta property="article:modified_time" content="2020-03-10T06:54:25.023Z">
 <meta property="article:author" content="Xiaofengchui">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="website">
@@ -351,7 +351,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-03-10T00:26:07+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2020-03-10T14:54:25+08:00">
                 2020-03-10
               </time>
             
@@ -434,7 +434,7 @@
 <p>这里我们自动添加了两条记录，但是有的人是提出要添加三条（但是我试了不太行），这边还是给出<a href="URL" title="https://zhuanlan.zhihu.com/p/26625249">链接</a>作为参考。</p>
 <p>接下来我们打开之前用于导入hexo数据的github厂库，然后点开设置(setting)下滑至custom domain栏目，填写你所注册的个性化域名并保存，例如我的是xiaofengchui.ink</p>
 <p><img src='http://i1.fuimg.com/712030/e7b02b0b550dacb4.png' width = "500" height = "300"></p>
-<p>然后再在你的本地blog/source目录下新建一个记事本，名为CNAME并且在里面输入你的个性化域名，然后保存为任意文件格式，如果是mac用户特别注意，当用自带的文本编辑器创建之后，在菜单栏找到格式，点击里面的制作多信息文本即可保存。</p>
+<p>然后再在你的本地blog/source目录下（这样在重新部署的时候不会被删掉，<code>hexo clean</code> 会将blog文件第一路径下的文件全部更新）新建一个记事本，名为CNAME并且在里面输入你的个性化域名，然后不要保存文件格式。用户打开显示所有文件格式之后，将文件的尾缀（如果有的话）删除即可，这样就不会保存为任何的文件格式了。</p>
 <p>接下来重新部署hexo，依次输入:</p>
 <pre><code>$ hexo clean
 $ hexo g # generate
