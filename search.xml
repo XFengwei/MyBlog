@@ -39,9 +39,9 @@ $ hexo d # deploy</code></pre>
         <category>工作日志</category>
       </categories>
       <tags>
+        <tag>hexo</tag>
         <tag>website</tag>
         <tag>workreview</tag>
-        <tag>hexo</tag>
         <tag>LeanCloud</tag>
         <tag>Next-搜索</tag>
         <tag>Next-评论</tag>
@@ -79,9 +79,9 @@ $ hexo d # deploy</code></pre>
         <category>工作日志</category>
       </categories>
       <tags>
+        <tag>hexo</tag>
         <tag>website</tag>
         <tag>workreview</tag>
-        <tag>hexo</tag>
         <tag>LeanCloud</tag>
         <tag>hexo的安装</tag>
         <tag>绑定域名</tag>
@@ -109,8 +109,8 @@ This is me and I love to travel (爱旅行的我).
         <category>个人日记</category>
       </categories>
       <tags>
-        <tag>website</tag>
         <tag>hexo</tag>
+        <tag>website</tag>
       </tags>
   </entry>
 </search>
