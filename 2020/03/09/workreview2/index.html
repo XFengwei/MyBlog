@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="website,workreview,hexo,LeanCloud,Next-搜索,Next-评论,valine," />
+  <meta name="keywords" content="hexo,website,workreview,LeanCloud,Next-搜索,Next-评论,valine," />
 
 
 
@@ -79,21 +79,21 @@
 
 
 
-<meta name="description" content="新增本地搜索引擎 内容参考博主Yaya的hexo - Next 主题添加搜索功能，该方法要求Next的主题版本至少在5.1.0  首先安装插件 hexo-generator-searchdb： 在blog工作目录下： $ npm install hexo-generator-searchdb --save 然后来配置根目录下的 _config.yml 文件： search:   path: sea">
+<meta name="description" content="新增本地搜索引擎  内容参考博主Yaya的hexo - Next 主题添加搜索功能，该方法要求Next的主题版本至少在5.1.0  首先安装插件 hexo-generator-searchdb： 在blog工作目录下： $ npm install hexo-generator-searchdb --save 然后来配置根目录下的 _config.yml 文件： search:   path: se">
 <meta property="og:type" content="article">
 <meta property="og:title" content="新增搜索引擎和评论">
 <meta property="og:url" content="http://yoursite.com/2020/03/09/workreview2/index.html">
 <meta property="og:site_name" content="小风吹墨">
-<meta property="og:description" content="新增本地搜索引擎 内容参考博主Yaya的hexo - Next 主题添加搜索功能，该方法要求Next的主题版本至少在5.1.0  首先安装插件 hexo-generator-searchdb： 在blog工作目录下： $ npm install hexo-generator-searchdb --save 然后来配置根目录下的 _config.yml 文件： search:   path: sea">
+<meta property="og:description" content="新增本地搜索引擎  内容参考博主Yaya的hexo - Next 主题添加搜索功能，该方法要求Next的主题版本至少在5.1.0  首先安装插件 hexo-generator-searchdb： 在blog工作目录下： $ npm install hexo-generator-searchdb --save 然后来配置根目录下的 _config.yml 文件： search:   path: se">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://i1.fuimg.com/712030/0dc6a62fe31bc889.png">
 <meta property="og:image" content="http://i2.tiimg.com/712030/861d86350d05de15.png">
 <meta property="article:published_time" content="2020-03-09T15:22:09.000Z">
 <meta property="article:modified_time" content="2020-03-09T16:26:26.965Z">
 <meta property="article:author" content="Xiaofengchui">
+<meta property="article:tag" content="hexo">
 <meta property="article:tag" content="website">
 <meta property="article:tag" content="workreview">
-<meta property="article:tag" content="hexo">
 <meta property="article:tag" content="LeanCloud">
 <meta property="article:tag" content="Next-搜索">
 <meta property="article:tag" content="Next-评论">
@@ -417,24 +417,26 @@
       
 
       
-        <h3 id="新增本地搜索引擎"><a href="#新增本地搜索引擎" class="headerlink" title="新增本地搜索引擎"></a>新增本地搜索引擎</h3><blockquote>
+        <h3 id="新增本地搜索引擎">新增本地搜索引擎</h3>
+<blockquote>
 <p>内容参考博主<strong>Yaya</strong>的<a href="https://yashuning.github.io/2018/06/29/hexo-Next-%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/" target="_blank" rel="noopener">hexo - Next 主题添加搜索功能</a>，该方法要求Next的主题版本至少在5.1.0</p>
 </blockquote>
 <p>首先安装插件 <code>hexo-generator-searchdb</code>：</p>
 <p>在blog工作目录下：</p>
-<pre><code>$ npm install hexo-generator-searchdb --save
-</code></pre><p>然后来配置根目录下的 <code>_config.yml</code> 文件：</p>
+<pre><code>$ npm install hexo-generator-searchdb --save</code></pre>
+<p>然后来配置根目录下的 <code>_config.yml</code> 文件：</p>
 <pre><code>search:
   path: search.xml
   field: post
   format: html
-  limit: 10000
-</code></pre><p>最后配置主题的 <code>_config.yml</code> 文件：</p>
+  limit: 10000</code></pre>
+<p>最后配置主题的 <code>_config.yml</code> 文件：</p>
 <pre><code># Local search
 local_search:
-  enable: true
-</code></pre><p><br></p>
-<h3 id="新增评论板块"><a href="#新增评论板块" class="headerlink" title="新增评论板块"></a>新增评论板块</h3><blockquote>
+  enable: true</code></pre>
+<p><br></p>
+<h3 id="新增评论板块">新增评论板块</h3>
+<blockquote>
 <p>内容参考博主<strong>Yaya</strong>的<a href="https://yashuning.github.io/2018/06/29/hexo-Next-%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/" target="_blank" rel="noopener">hexo - Next 主题添加评论功能</a>，下面主要以valine评论系统进行演示。</p>
 </blockquote>
 <p>首先我们需要在<a href="https://www.leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>注册一个账号，进入控制台，然后添加新的一个App，选择<del>免费</del>developer模式，然后创建。点开App项目（我的App名字叫comment，如下图）之后，选择左侧项目栏的App keys，保存AppID与AppKey备用</p>
@@ -444,8 +446,8 @@ local_search:
 <p>重新部署hexo，依次输入：</p>
 <pre><code>$ hexo clean
 $ hexo g # generate
-$ hexo d # deploy
-</code></pre><p>完成！</p>
+$ hexo d # deploy</code></pre>
+<p>完成！</p>
 
       
     </div>
@@ -463,11 +465,11 @@ $ hexo d # deploy
       
         <div class="post-tags">
           
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
             <a href="/tags/website/" rel="tag"># website</a>
           
             <a href="/tags/workreview/" rel="tag"># workreview</a>
-          
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
           
             <a href="/tags/LeanCloud/" rel="tag"># LeanCloud</a>
           
