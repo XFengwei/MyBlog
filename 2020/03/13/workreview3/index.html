@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="en">
+<html class="theme-next mist use-motion" lang="en">
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -131,7 +131,7 @@
 <meta property="og:description" content="添加软软看板娘  Live2d以及其优越性  Live2d is a technique of generating animated 2D graphics, usually anime-style characters, using layered, continuous parts based on a single illustration, without the need of ani">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-13T10:47:19.000Z">
-<meta property="article:modified_time" content="2020-03-14T06:05:02.934Z">
+<meta property="article:modified_time" content="2020-03-16T05:40:55.025Z">
 <meta property="article:author" content="Xiaofengchui">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="website">
@@ -146,7 +146,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Mist',
     version: '5.1.4',
     sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
@@ -391,8 +391,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-03-14T14:05:02+08:00">
-                2020-03-14
+              <time title="Post modified" itemprop="dateModified" datetime="2020-03-16T13:40:55+08:00">
+                2020-03-16
               </time>
             
           </span>
@@ -456,7 +456,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,069 字
+                  1,100 字
                 </span>
               
 
@@ -503,38 +503,15 @@
 <p>hexo框架的live2d插件</p>
 </blockquote>
 <p>目前有hexo友<del>大佬</del>已经写好了，并且把源码发到了<a href="https://github.com/EYHN/hexo-helper-live2d" target="_blank" rel="noopener">github</a>上，如果需要直接安装，我们只需要在博客根目录下打开<code>git bash</code>然后输入</p>
-<pre><code>npm install --save hexo-helper-live2d</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">npm <span class="hljs-keyword">install</span> <span class="hljs-comment">--save hexo-helper-live2d</span><br></code></pre></td></tr></table></figure>
 <p>便可以直接安装模块。安装之后，在博客的根目录下的配置文件-<code>_config.yml</code>中添加以下内容：</p>
-<pre><code>## Live2D
-## https://github.com/EYHN/hexo-helper-live2d
-live2d:
-    enable: true
-  # enable: false
-    scriptFrom: local # 默认
-    pluginRootPath: live2dw/ # 插件在站点上的根目录(相对路径)
-    pluginJsPath: lib/ # 脚本文件相对与插件根目录路径
-    pluginModelPath: assets/ # 模型文件相对与插件根目录路径
-  # scriptFrom: jsdelivr # jsdelivr CDN
-  # scriptFrom: unpkg # unpkg CDN
-  # scriptFrom: https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js # 你的自定义 url
-    tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
-    debug: false # 调试, 是否在控制台输出日志
-    model:
-      use: live2d-widget-model-shizuku # npm-module package name
-    # use: wanko # 博客根目录/live2d_models/ 下的目录名
-    # use: ./wives/wanko # 相对于博客根目录的路径
-    # use: https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json # 你的自定义 url
-    display: # 模型位置，根据不同的模型自行调整
-      position: left
-      width: 225
-      height: 450
-    mobile: # 是否适用于移动端
-      show: true</code></pre>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment">## Live2D</span><br><span class="hljs-comment">## https://github.com/EYHN/hexo-helper-live2d</span><br><span class="hljs-attr">live2d:</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-comment"># enable: false</span><br>    <span class="hljs-attr">scriptFrom:</span> <span class="hljs-string">local</span> <span class="hljs-comment"># 默认</span><br>    <span class="hljs-attr">pluginRootPath:</span> <span class="hljs-string">live2dw/</span> <span class="hljs-comment"># 插件在站点上的根目录(相对路径)</span><br>    <span class="hljs-attr">pluginJsPath:</span> <span class="hljs-string">lib/</span> <span class="hljs-comment"># 脚本文件相对与插件根目录路径</span><br>    <span class="hljs-attr">pluginModelPath:</span> <span class="hljs-string">assets/</span> <span class="hljs-comment"># 模型文件相对与插件根目录路径</span><br>  <span class="hljs-comment"># scriptFrom: jsdelivr # jsdelivr CDN</span><br>  <span class="hljs-comment"># scriptFrom: unpkg # unpkg CDN</span><br>  <span class="hljs-comment"># scriptFrom: https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js # 你的自定义 url</span><br>    <span class="hljs-attr">tagMode:</span> <span class="hljs-literal">false</span> <span class="hljs-comment"># 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中</span><br>    <span class="hljs-attr">debug:</span> <span class="hljs-literal">false</span> <span class="hljs-comment"># 调试, 是否在控制台输出日志</span><br>    <span class="hljs-attr">model:</span><br>      <span class="hljs-attr">use:</span> <span class="hljs-string">live2d-widget-model-shizuku</span> <span class="hljs-comment"># npm-module package name</span><br>    <span class="hljs-comment"># use: wanko # 博客根目录/live2d_models/ 下的目录名</span><br>    <span class="hljs-comment"># use: ./wives/wanko # 相对于博客根目录的路径</span><br>    <span class="hljs-comment"># use: https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json # 你的自定义 url</span><br>    <span class="hljs-attr">display:</span> <span class="hljs-comment"># 模型位置，根据不同的模型自行调整</span><br>      <span class="hljs-attr">position:</span> <span class="hljs-string">left</span><br>      <span class="hljs-attr">width:</span> <span class="hljs-number">225</span><br>      <span class="hljs-attr">height:</span> <span class="hljs-number">450</span><br>    <span class="hljs-attr">mobile:</span> <span class="hljs-comment"># 是否适用于移动端</span><br>      <span class="hljs-attr">show:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+<p><br></p>
 <blockquote>
 <p>模型</p>
 </blockquote>
 <p>注意，上一段代码中我们只需要关注两点：一是记住<code>enable</code>是live2d这段代码的开关，<code>true</code>表示我们启用这段代码，此后的代码才会生效，如果不想让hexo运行live2d渲染，那就改为<code>false</code>；二是<code>use: live2d-widget-model-shizuku</code>，这里面的<code>live2d-widget-model-shizuku</code>是就是我们的<del>看板娘</del>2d模块的名字，是位于根目录下的<code>/node_modules/</code>中的文件名。最开始默认应该是没有相关的文件的，需要去<a href="https://github.com/xiazeyu/live2d-widget-models" target="_blank" rel="noopener">现有模型的github</a>下载，下载格式为：</p>
-<pre><code>npm install {packagename}</code></pre>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">npm <span class="hljs-keyword">install</span> &#123;packagename&#125;<br></code></pre></td></tr></table></figure>
 <p>下载完成后，在<code>/node_modules/</code>下找到相应的<code>live2d-widget-model-{name}</code>文件，拷贝文件名粘贴到<code>use:</code>后面就可以啦，试试看吧。</p>
 <p>我的看板娘的名字是<I>shizuku</I>，喜欢的话直接下载这个<code>live2d-widget-model-shizuku</code>就可以喔。</p>
 <p><br></p>
@@ -544,11 +521,9 @@ live2d:
 <p>添加了软软看板娘之后我们需要找到一个符合她气质的鼠标点击特效，比如本博客使用的<B>爱心点击</B>特效，这样你点击萌萌的软软之后就能出现小爱心</p>
 </blockquote>
 <p>在<code>/theme/next/source/js/src</code>路径下新建一个javascript的文件<code>clicklove.js</code>，其中写入</p>
-<pre><code>/*网页鼠标点击特效（爱心）*/
-!function (e, t, a) {function r() {for (var e = 0; e &lt; s.length; e++) s[e].alpha &lt;= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = &quot;left:&quot; + s[e].x + &quot;px;top:&quot; + s[e].y + &quot;px;opacity:&quot; + s[e].alpha + &quot;;transform:scale(&quot; + s[e].scale + &quot;,&quot; + s[e].scale + &quot;) rotate(45deg);background:&quot; + s[e].color + &quot;;z-index:99999&quot;);requestAnimationFrame(r)}function n() {var t = &quot;function&quot; == typeof e.onclick &amp;&amp; e.onclick;e.onclick = function (e) {t &amp;&amp; t(), o(e)}}function o(e) {var a = t.createElement(&quot;div&quot;);a.className = &quot;heart&quot;, s.push({el: a,x: e.clientX - 5,y: e.clientY - 5,scale: 1,alpha: 1,color: c()}), t.body.appendChild(a)}function i(e) {var a = t.createElement(&quot;style&quot;);a.type = &quot;text/css&quot;;try {a.appendChild(t.createTextNode(e))} catch (t) {a.styleSheet.cssText = e}t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)}function c() {return &quot;rgb(&quot; + ~~(255 * Math.random()) + &quot;,&quot; + ~~(255 * Math.random()) + &quot;,&quot; + ~~(255 * Math.random()) + &quot;)&quot;}var s = [];e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {setTimeout(e, 1e3 / 60)}, i(&quot;.heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: &#39;&#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}&quot;), n(), r()}(window, document);</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">/*网页鼠标点击特效（爱心）*/</span><br>!<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, a</span>) </span>&#123;<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">r</span>(<span class="hljs-params"></span>) </span>&#123;<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> e = <span class="hljs-number">0</span>; e &lt; s.length; e++) s[e].alpha &lt;= <span class="hljs-number">0</span> ? (t.body.removeChild(s[e].el), s.splice(e, <span class="hljs-number">1</span>)) : (s[e].y--, s[e].scale += <span class="hljs-number">.004</span>, s[e].alpha -= <span class="hljs-number">.013</span>, s[e].el.style.cssText = <span class="hljs-string">"left:"</span> + s[e].x + <span class="hljs-string">"px;top:"</span> + s[e].y + <span class="hljs-string">"px;opacity:"</span> + s[e].alpha + <span class="hljs-string">";transform:scale("</span> + s[e].scale + <span class="hljs-string">","</span> + s[e].scale + <span class="hljs-string">") rotate(45deg);background:"</span> + s[e].color + <span class="hljs-string">";z-index:99999"</span>);requestAnimationFrame(r)&#125;<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">n</span>(<span class="hljs-params"></span>) </span>&#123;<span class="hljs-keyword">var</span> t = <span class="hljs-string">"function"</span> == <span class="hljs-keyword">typeof</span> e.onclick &amp;&amp; e.onclick;e.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>&#123;t &amp;&amp; t(), o(e)&#125;&#125;<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">o</span>(<span class="hljs-params">e</span>) </span>&#123;<span class="hljs-keyword">var</span> a = t.createElement(<span class="hljs-string">"div"</span>);a.className = <span class="hljs-string">"heart"</span>, s.push(&#123;<span class="hljs-attr">el</span>: a,<span class="hljs-attr">x</span>: e.clientX - <span class="hljs-number">5</span>,<span class="hljs-attr">y</span>: e.clientY - <span class="hljs-number">5</span>,<span class="hljs-attr">scale</span>: <span class="hljs-number">1</span>,<span class="hljs-attr">alpha</span>: <span class="hljs-number">1</span>,<span class="hljs-attr">color</span>: c()&#125;), t.body.appendChild(a)&#125;<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">i</span>(<span class="hljs-params">e</span>) </span>&#123;<span class="hljs-keyword">var</span> a = t.createElement(<span class="hljs-string">"style"</span>);a.type = <span class="hljs-string">"text/css"</span>;<span class="hljs-keyword">try</span> &#123;a.appendChild(t.createTextNode(e))&#125; <span class="hljs-keyword">catch</span> (t) &#123;a.styleSheet.cssText = e&#125;t.getElementsByTagName(<span class="hljs-string">"head"</span>)[<span class="hljs-number">0</span>].appendChild(a)&#125;<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">c</span>(<span class="hljs-params"></span>) </span>&#123;<span class="hljs-keyword">return</span> <span class="hljs-string">"rgb("</span> + ~~(<span class="hljs-number">255</span> * <span class="hljs-built_in">Math</span>.random()) + <span class="hljs-string">","</span> + ~~(<span class="hljs-number">255</span> * <span class="hljs-built_in">Math</span>.random()) + <span class="hljs-string">","</span> + ~~(<span class="hljs-number">255</span> * <span class="hljs-built_in">Math</span>.random()) + <span class="hljs-string">")"</span>&#125;<span class="hljs-keyword">var</span> s = [];e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>&#123;setTimeout(e, <span class="hljs-number">1e3</span> / <span class="hljs-number">60</span>)&#125;, i(<span class="hljs-string">".heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;"</span>), n(), r()&#125;(<span class="hljs-built_in">window</span>, <span class="hljs-built_in">document</span>);<br></code></pre></td></tr></table></figure>
 <p>然后再打开<code>\themes\next\layout\_layout.swig</code>文件，在<code>&lt;body&gt;&lt;/body&gt;</code>体内的最后加上一句</p>
-<pre><code>&lt;!-- 页面点击小红心 --&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/clicklove.js&quot;&gt;&lt;/script&gt;</code></pre>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/js/src/clicklove.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <p>然后重制一下hexo试试看吧！</p>
 
       
@@ -557,13 +532,52 @@ live2d:
     
     
     
+       <div>
+         <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+       </div>
+    
+    
     <div>
       
         
       
     </div>
+
     
 
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>记得三连么么哒：评论+投币+分享</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Xiaofengchui WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Xiaofengchui Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
@@ -689,7 +703,7 @@ live2d:
               
                 <a href="/archives%7C%7C%20archive">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -700,7 +714,7 @@ live2d:
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -711,7 +725,7 @@ live2d:
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -782,7 +796,7 @@ live2d:
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 
@@ -911,13 +925,6 @@ live2d:
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
@@ -1353,7 +1360,7 @@ live2d:
     <!-- 代码块复制功能 -->
   <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
   <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":225,"height":450},"mobile":{"show":true},"log":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":225,"height":450},"mobile":{"show":true},"log":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config("");
 </script>
